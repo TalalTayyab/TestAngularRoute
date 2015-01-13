@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="main.html" />
+    <Content Include="page1-2.html" />
     <Content Include="scripts\angular.min.js.map" />
     <Content Include="packages.config" />
     <Content Include="scripts\angular-route.min.js.map" />

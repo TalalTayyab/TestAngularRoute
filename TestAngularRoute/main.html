@@ -28,6 +28,15 @@
                 }).when('/page1-2', {
                     templateUrl: 'page1-2.html'
                 });
+
+               
+
+            });
+
+            app.controller('mainCtrl', function ($scope, $location) {
+                $scope.browse = function (url) {
+                    $location.path(url);
+                }
             });
 
         }());
@@ -36,13 +45,13 @@
 
 
 </head>
-<body>
+<body ng-controller="mainCtrl">
     <h1>This is the main page</h1>
     <div ng-view>
 
     </div>
 
-    <a href="page1">Page 1</a>
+    <a href="" ng-click="browse('page1')">Page 1</a>
 
 
 </body>

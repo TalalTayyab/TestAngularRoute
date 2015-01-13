@@ -8,23 +8,23 @@
 
     <script type="text/javascript">
 
-    (function () {
+        (function () {
 
-        var app = angular.module("testAngularRouteApp", ['ngRoute']);
+            var app = angular.module("testAngularRouteApp", ['ngRoute']);
 
-        app.config(function ($routeProvider, $locationProvider) {
+            app.config(function ($routeProvider, $locationProvider) {
 
-            $locationProvider.html5Mode({
-                enabled: false,
-                requireBase: false
+                $locationProvider.html5Mode({
+                    enabled: false,
+                    requireBase: false
+                });
+
+                $routeProvider.when('/page1', {
+                    templateUrl: 'page1.html'
+                });
             });
 
-            $routeProvider.when('/Folder/TestAngularRoute/page1', {
-                templateUrl: 'page1.html'
-            });
-        });
-
-    }());
+        }());
 
     </script>
 
@@ -35,7 +35,7 @@
 
     </div>
 
-    <a href="#/test/page1">Page 1</a>
+    <a href="/#/page1">Page 1</a>
 
 
 </body>

@@ -1,0 +1,65 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html ng-app="testAngularRouteApp">
+<head>
+    <base href="~/" />
+    <title></title>
+    <script src="~/scripts/angular.js"></script>
+    <script src="~/scripts/angular-route.js"></script>
+
+    <script type="text/javascript">
+
+        (function () {
+
+            //var domBase = document.getElementsByTagName("base");
+            //domBase[0].href = document.location.pathname;
+
+
+            var app = angular.module("testAngularRouteApp", ['ngRoute']);
+
+            app.config(function ($routeProvider, $locationProvider) {
+
+                $locationProvider.html5Mode({
+                    enabled: true,
+                    requireBase: false
+                });
+
+                $routeProvider.when('/page1', {
+                    templateUrl: 'page/page_1'
+                }).when('/page1-2', {
+                    templateUrl: 'page/page_1_2'
+                });
+
+
+
+            });
+
+            app.controller('mainCtrl', function ($scope, $location) {
+                $scope.browse = function (url) {
+                    $location.path(url);
+                }
+            });
+
+        }());
+
+    </script>
+
+
+</head>
+<body ng-controller="mainCtrl">
+    <h1>This is the razor main page</h1>
+    <div ng-view>
+
+    </div>
+
+    <a href="" ng-click="browse('page1')">Page 1</a>
+
+
+</body>
+</html>

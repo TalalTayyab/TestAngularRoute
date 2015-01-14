@@ -93,6 +93,7 @@
     <Content Include="scripts\angular-route.min.js.map" />
     <Content Include="Views\Page\Page_1.cshtml" />
     <Content Include="Views\Page\Page_1_2.cshtml" />
+    <Content Include="Views\Page\Main.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

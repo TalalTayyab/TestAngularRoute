@@ -14,7 +14,7 @@ namespace TestAngularRoute
             routes.MapRoute(
                  name: "Default",
                  url: "{controller}/{action}/{id}",
-                 defaults: new { controller = "Page", action = "Page_1", id = UrlParameter.Optional }
+                 defaults: new { controller = "Page", action = "Main", id = UrlParameter.Optional }
              );
 
         }

@@ -15,5 +15,10 @@ namespace TestAngularRoute.Controllers
         {
             return View();
         }
+
+        public ActionResult Main()
+        {
+            return View();
+        }
     }
 }

@@ -11,13 +11,22 @@ namespace TestAngularRoute
         protected void Application_Start(object sender, EventArgs e)
         {
             RouteCollection routes = RouteTable.Routes;
+
+            routes.MapRoute(
+                  name: "DefaultPage",
+                  url: "Page1",
+                  defaults: new { controller = "Page", action = "Main", id = UrlParameter.Optional }
+              );
+
             routes.MapRoute(
                  name: "Default",
                  url: "{controller}/{action}/{id}",
                  defaults: new { controller = "Page", action = "Main", id = UrlParameter.Optional }
              );
 
+            
+
         }
-                
+
     }
 }

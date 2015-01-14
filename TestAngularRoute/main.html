@@ -19,14 +19,14 @@
             app.config(function ($routeProvider, $locationProvider) {
 
                 $locationProvider.html5Mode({
-                    enabled: false,
+                    enabled: true,
                     requireBase: false
                 });
 
                 $routeProvider.when('/page1', {
-                    templateUrl: 'page1.html'
+                    templateUrl: 'page/page_1'
                 }).when('/page1-2', {
-                    templateUrl: 'page1-2.html'
+                    templateUrl: 'page/page_1_2'
                 });
 
                

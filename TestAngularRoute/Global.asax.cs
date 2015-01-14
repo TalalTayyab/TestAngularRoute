@@ -13,14 +13,14 @@ namespace TestAngularRoute
             RouteCollection routes = RouteTable.Routes;
 
             routes.MapRoute(
-                  name: "DefaultPage",
-                  url: "Page1",
+                  name: "Default",
+                  url: "Page/{action}/{id}",
                   defaults: new { controller = "Page", action = "Main", id = UrlParameter.Optional }
               );
 
             routes.MapRoute(
-                 name: "Default",
-                 url: "{controller}/{action}/{id}",
+                 name: "DefaultAll",
+                 url: "{*.}",
                  defaults: new { controller = "Page", action = "Main", id = UrlParameter.Optional }
              );
 
